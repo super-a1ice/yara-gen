@@ -13,4 +13,4 @@ RUN pip install wheel
 RUN pip install scandir lxml naiveBayesClassifier pefile
 RUN python yarGen.py --update
 COPY entrypoint.sh /
-CMD ["bash", "/entrypoint.sh"]
+ENTRYPOINT ["bash", "/entrypoint.sh"]

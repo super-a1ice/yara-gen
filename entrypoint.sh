@@ -1,2 +1,3 @@
 #!/bin/bash -e
-python yarGen.py --debug --score -m /malware -o /malware/output.yar
+rule_file=$(basename $1)
+python yarGen.py --debug --score -m $1 -o /rules/${rule_file}.yar
